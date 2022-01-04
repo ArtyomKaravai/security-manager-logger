@@ -11,8 +11,13 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class RabbitMqListener {
 
-    @RabbitListener(queues = "${spring.rabbitmq.queueName}")
-    public void processMyQueue(RabbitMqLogMessageDto dto) {
+    @RabbitListener(queues = "${spring.rabbitmq.publicationQueueName}")
+    public void processPublicationQueue(RabbitMqLogMessageDto dto) {
+        log.info(dto.toString());
+    }
+
+    @RabbitListener(queues = "${spring.rabbitmq.userQueueName}")
+    public void processUserQueue(RabbitMqLogMessageDto dto) {
         log.info(dto.toString());
     }
 }
