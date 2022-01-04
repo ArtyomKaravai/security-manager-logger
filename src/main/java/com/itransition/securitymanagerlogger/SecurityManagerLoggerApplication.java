@@ -11,9 +11,4 @@ public class SecurityManagerLoggerApplication {
     public static void main(String[] args) {
         SpringApplication.run(SecurityManagerLoggerApplication.class, args);
     }
-
-    @Bean
-    public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
-        return new Jackson2JsonMessageConverter();
-    }
 }
