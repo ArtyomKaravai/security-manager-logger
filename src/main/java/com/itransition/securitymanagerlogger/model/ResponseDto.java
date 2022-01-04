@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME)
 @JsonSubTypes({
-        @JsonSubTypes.Type(name="PUB", value= PublicationResponseDto.class),
-        @JsonSubTypes.Type(name="USER", value= UserResponseDto.class)})
+        @JsonSubTypes.Type(name = "PUB", value = PublicationResponseDto.class),
+        @JsonSubTypes.Type(name = "USER", value = UserResponseDto.class)})
 public interface ResponseDto extends Serializable {
 }
